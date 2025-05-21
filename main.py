@@ -1,10 +1,17 @@
 from stats import get_num_words, characters_dictionare, get_book_content,sort_dict
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
 
 def main():
 
-    book = "books/frankenstein.txt"
+    book = sys.argv[1]
+
     number_words = get_num_words(book)
-    file_content = get_book_content("books/frankenstein.txt")
+    file_content = get_book_content(book)
     char_dict = characters_dictionare(file_content)
     dictionary = sort_dict(char_dict)
 

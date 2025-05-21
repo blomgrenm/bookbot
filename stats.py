@@ -21,7 +21,6 @@ def characters_dictionare(text_to_count):
 
 def sort_dict(dictionary):
     dict_list = []
-    print(dictionary)
 
     def sort_on(dict):
         return dict["num"]
